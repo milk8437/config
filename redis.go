@@ -11,7 +11,7 @@ var (
 )
 
 //构造redis客户端
-func CreateRedis(config map[string]interface{}) (func(), error) {
+func CreateRedis() {
     rc :=Prop.Database
 	if rc.Port == 0 {
 		rc.Port = 6379
@@ -23,8 +23,6 @@ func CreateRedis(config map[string]interface{}) (func(), error) {
 	log := LOG.Named("REDIS")
 	log.Info("create REDIS client successfully...",
 		zap.String("host", rc.Host))
-	return nil, nil
-
 }
 
 type RedisConfig struct {
