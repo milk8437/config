@@ -12,7 +12,7 @@ var (
 
 //构造redis客户端
 func CreateRedis() {
-    rc :=Prop.Database
+    rc :=Prop.Redis
 	if rc.Port == 0 {
 		rc.Port = 6379
 	}
