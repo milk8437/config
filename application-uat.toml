@@ -1,0 +1,28 @@
+[server]
+    port= 8085
+[logger]
+    filename="logs/config.log"
+    level="info"
+    #编码格式为json还可以选择console
+    encoding="json"
+    max_size=500 #megabytes
+    max_age=30 #day
+    development=false
+#[database]
+#    host="localhost"
+#    port=5432
+#    username="postgres"
+#    password="postgres"
+#    dbname="postgres"
+[redis]
+    host="localhost"
+    port=6379
+    password="123123"
+[kafka]
+    address=["localhost:9092",]
+    client_id="config"
+    topics={config="111",vacant="222"}
+    consumers={hit={topic="111",group_id="config",channels=50}}
+[variable]
+
+
