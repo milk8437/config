@@ -15,7 +15,7 @@ type Server struct {
 
 //Logger gin用的日志
 //记录请求耗费时间
-func loggerForGin() gin.HandlerFunc {
+func LoggerForGin() gin.HandlerFunc {
 	l := LOG.Named("GIN")
 	return func(c *gin.Context) {
 		// Start timer
@@ -43,7 +43,7 @@ func loggerForGin() gin.HandlerFunc {
 //Recovery 异常恢复
 //发生panic及时恢复并且记录日志，返回固定resp
 //panic会导致整个应用崩溃
-func recoveryForGin() gin.HandlerFunc {
+func RecoveryForGin() gin.HandlerFunc {
 	l := LOG.Named("GIN.RECOVERY")
 	return func(c *gin.Context) {
 		defer func() {
