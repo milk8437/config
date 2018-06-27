@@ -11,7 +11,7 @@ var (
 )
 
 //构造redis客户端
-func NewRedisClient(config map[string]interface{}) (func(), error) {
+func CreateRedis(config map[string]interface{}) (func(), error) {
     rc :=Prop.Database
 	if rc.Port == 0 {
 		rc.Port = 6379

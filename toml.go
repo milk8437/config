@@ -4,6 +4,7 @@ import (
 	"os"
 	"io/ioutil"
 	"github.com/BurntSushi/toml"
+	"fmt"
 )
 
 //加载配置文件的方法
@@ -26,6 +27,7 @@ func NewProperties(ld LoadDataFromEsc) {
 	var data string
 
 	if command.Local && len(command.Fpath) > 0 {
+		fmt.Println("load config file:" + command.Fpath)
 		//加载命令行指定配置文件
 		file, err := os.Open(command.Fpath)
 		if err != nil {

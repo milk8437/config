@@ -80,11 +80,6 @@ func CreateConsumer(key string, hm HandleMessage) {
 	log.Info("业务处理kafka消息执行完成!")
 }
 
-////此项目先关闭消费者，因为生产者数据来源于消费者的信息处理
-//func Destroy() {
-//	DestroyConsumer()
-//	DestroyProducer()
-//}
 
 //consume 处理业务 池
 type Handle struct {
