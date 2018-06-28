@@ -52,3 +52,18 @@ func NewProperties(ld LoadDataFromEsc) {
 		Prop.Server.Port = command.Port
 	}
 }
+
+func GetVariables() map[string]string{
+	return Prop.Variable
+}
+
+func GetDatabase()*Database{
+	return Prop.Database
+}
+
+func GetRedis() *RedisConfig{
+	return Prop.Redis
+}
+func GetKafka() *KafkaConfig{
+	return Prop.Kafka
+}
